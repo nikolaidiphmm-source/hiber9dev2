@@ -28,7 +28,7 @@ public class Course {
     @Column(length = 1000)
     private String comments;
 
-    @Enumerated(EnumType.ORDINAL)       //default
+    @Enumerated(EnumType.STRING)       //default
     @Column(name = "lesson_type")
     private LessonType lessonType;
 
