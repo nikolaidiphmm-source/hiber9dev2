@@ -2,18 +2,17 @@ package gr.aueb.cf.model;
 
 import gr.aueb.cf.enums.LessonType;
 import jakarta.persistence.*;
-import lombok.AccessLevel;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
+@Builder
 @Entity
 @Table(name = "courses")
 public class Course {
