@@ -9,6 +9,7 @@ import lombok.Setter;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @NoArgsConstructor
 @Getter
@@ -20,6 +21,9 @@ public class Teacher {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "uuid", nullable = false, unique = true)
+    private UUID uuid = UUID.randomUUID();
 
     @Column(nullable = false)
     private String firstname;
